@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="public/css/style.css">
+</head>
+<body>
+	<div class="logo">
+		<a href="#">
+			<img src="public/image/footer_icon.png">
+		</a>
+	</div>
+	<div class="main-content">
+		<h3 class="title">ĐĂNG NHẬP</h3>
+		<form class="needs-validation" novalidate action="modules/XuLiLogin.php" method="POST">
+  			<div class="form-group">
+    			<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tên đăng nhập hoặc mật khẩu" name="name" required>
+				<!-- <small id="emailHelp" class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ email của bạn với bất cứ ai khác.</small> -->
+				<div class="invalid-feedback">
+					Tên đăng nhập không được để trống.
+				</div>
+  			</div>
+  			<div class="form-group">
+    			<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu" name="password" required>
+				<div class="invalid-feedback">
+					Mật khẩu không được để trống.	
+				</div>
+			</div>
+  			<div class="form-group form-check">
+    			<input type="checkbox" class="form-check-input" id="exampleCheck1">
+    			<label class="form-check-label" for="exampleCheck1">Ghi nhớ</label>
+  			</div>
+  			<div class="row">
+  				<div class="col-sm-6">
+  					<button type="submit" class="btn btn-outline-success btn-block btn-lg">Đăng nhập</button>
+  				</div>
+  				<div class="col-sm-6">
+  					<button type="submit" class="btn btn-outline-danger btn-block btn-lg">Đăng ký</button>
+  				</div>
+  			</div>
+		</form>
+		<script>
+			// Example starter JavaScript for disabling form submissions if there are invalid fields
+			(function() {
+			  'use strict';
+			  window.addEventListener('load', function() {
+				// Fetch all the forms we want to apply custom Bootstrap validation styles to
+				var forms = document.getElementsByClassName('needs-validation');
+				// Loop over them and prevent submission
+				var validation = Array.prototype.filter.call(forms, function(form) {
+				  form.addEventListener('submit', function(event) {
+					if (form.checkValidity() === false) {
+					  event.preventDefault();
+					  event.stopPropagation();
+					}
+					form.classList.add('was-validated');
+				  }, false);
+				});
+			  }, false);
+			})();
+			</script>
+	</div>
+	<div class="footer text-center">
+	
+	</div>
+	<footer class="text-center">	
+	Copyright &copy 2019 Nguyễn Văn Thì Tin10A8</footer>
+</body>
+</html>
